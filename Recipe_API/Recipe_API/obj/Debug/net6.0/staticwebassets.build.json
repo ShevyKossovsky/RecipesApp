@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "hf1cU5TdagDsHhY2AvpT/yZB8bNMxOcrxU4Ugmda9zY=",
-  "Source": "Recipe_API",
-  "BasePath": "_content/Recipe_API",
+  "Hash": "u2qvjoBciZ8limu8gI4xDQZEOv1BAXBtJBwX1BMvAlQ=",
+  "Source": "Recipe_API_Server",
+  "BasePath": "_content/Recipe_API_Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

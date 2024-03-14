@@ -7,7 +7,7 @@
 
 
     <div class="search-input">
-        <input autocomplete="on" type="search" class="form-control searchInput" [(ngModel)]="searchTerm"
+        <input autocomplete="on" type="search" class="form-control searchInput" [(ngModel)]="searchTerm"  (ngModelChange)="searchRecipes()"
             placeholder="Type something..." />
         <button class="btn searchBtn" type="button" (click)="searchRecipes()">
             <i class="fas fa-search"></i>
@@ -33,7 +33,7 @@
         <div class="filterContainer">
             <mat-icon>timer</mat-icon>
             <p>Duration of preparation in minutes:</p>
-            <mat-slider class="custom-slider" min="5" max="180" step="5" showTickMarks discrete style="width: 90%;">
+            <mat-slider color="primary" class="custom-slider" min="5" max="180" step="5" showTickMarks discrete style="width: 90%;">
 
                 <input matSliderThumb [(ngModel)]="selectedPreparationTime">
             </mat-slider>

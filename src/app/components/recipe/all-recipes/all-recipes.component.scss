@@ -1,3 +1,6 @@
+
+
+
 .search-container {
   display: flex !important;
   justify-content: center;
@@ -68,11 +71,17 @@ font-size: 80px;
 margin-left: 40%;
 
 }
+.filter-category{
+  display: flex;
+  flex-direction: column;
+}
 .loading{
   font-size:40px;
 
 
 }
+
+
 .btn{
   background-color: rgb(255, 230, 0);;
 }
