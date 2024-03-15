@@ -21,6 +21,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import {MatCardModule} from '@angular/material/card';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { ButtonModule } from 'primeng/button';
+import { DividerModule } from 'primeng/divider';
 
 @NgModule({
     declarations: [AddRecipeComponent, EditRecipeComponent, AllRecipesComponent, RecipeDetailsComponent, SmallRecipeComponent], // Add SidebarModule to declarations
@@ -44,6 +46,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
         MatCheckboxModule,
         MatCardModule,
         MatTooltipModule,
+        ButtonModule,
+        DividerModule
         
     ]
 })
