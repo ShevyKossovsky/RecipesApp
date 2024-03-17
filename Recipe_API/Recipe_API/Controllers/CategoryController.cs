@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Recipe_API.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CategoryController : ControllerBase
-    {//Create a local category list
+  [Route("api/[controller]")]
+  [ApiController]
+  public class CategoryController : ControllerBase
+  {//Create a local category list
     public static List<Category> categories = new List<Category>
 {
     new Category{Code=1, Name="Stews and Casseroles", IconRoute="🥘"},
@@ -23,50 +23,50 @@ namespace Recipe_API.Controllers
 };
     // GET: api/<CategoryController>
     [HttpGet]
-        public ActionResult<IEnumerable<Category>> Get()
-        {
-            return Ok(categories);
-        }
-
-        // GET api/<CategoryController>/5
-        [HttpGet("{id}")]
-        public ActionResult<Category> Get(int id)
-        {
-            var category = categories.Find(c=>c.Code==id);
-            if (category == null)
-                return NotFound();
-            return Ok(category);
-        }
-
-        // POST api/<CategoryController>
-        [HttpPost]
-        public void Post([FromBody] Category category)
-        {
-            categories.Add(category);
-        }
-
-        // PUT api/<CategoryController>/5
-        [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Category category)
-        {
-            Category categoryForUpdating = categories.Find(c => c.Code == id);
-            if (categoryForUpdating == null)
-                return NotFound();
-            categoryForUpdating.Name = category.Name;
-            categoryForUpdating.IconRoute= category.IconRoute;
-            return NoContent();
-
-        }
-
-        // DELETE api/<CategoryController>/5
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
-        {
-            Category categoryForDeleting = categories.Find(c => c.Code == id);
-            if (categoryForDeleting == null)
-                return NotFound();
-            categories.Remove(categoryForDeleting);
-            return NoContent();
-        }
+    public ActionResult<IEnumerable<Category>> Get()
+    {
+      return Ok(categories);
     }
+
+    // GET api/<CategoryController>/5
+    [HttpGet("{id}")]
+    public ActionResult<Category> Get(int id)
+    {
+      var category = categories.Find(c => c.Code == id);
+      if (category == null)
+        return NotFound();
+      return Ok(category);
+    }
+
+    // POST api/<CategoryController>
+    [HttpPost]
+    public void Post([FromBody] Category category)
+    {
+      categories.Add(category);
+    }
+
+    // PUT api/<CategoryController>/5
+    [HttpPut("{id}")]
+    public IActionResult Put(int id, [FromBody] Category category)
+    {
+      Category categoryForUpdating = categories.Find(c => c.Code == id);
+      if (categoryForUpdating == null)
+        return NotFound();
+      categoryForUpdating.Name = category.Name;
+      categoryForUpdating.IconRoute = category.IconRoute;
+      return NoContent();
+
+    }
+
+    // DELETE api/<CategoryController>/5
+    [HttpDelete("{id}")]
+    public IActionResult Delete(int id)
+    {
+      Category categoryForDeleting = categories.Find(c => c.Code == id);
+      if (categoryForDeleting == null)
+        return NotFound();
+      categories.Remove(categoryForDeleting);
+      return NoContent();
+    }
+  }
 }
